@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../w3.css">
+    <link rel="stylesheet" href="../../w3-theme-blue-grey.css">
+</head>
+<body>
+   <div class="w3-container w3-light-gray w3-card w3-center w3-padding-16">
+      <div class="w3-wide w3-xxlarge">POPULATION STASTICS </div>
+   </div>
+   <div class="w3-row-padding w3-margin-top">
+      <div class="w3-container w3-col l6 m6 s12 " >
+         <div class="w3-card ">
+            <div class=" w3-xxlarge w3-wide w3-light-gray w3-padding-16 w3-center" >SIZE</div>
+            <div id="id001" class="w3-padding-16 w3-xxlarge w3-wide w3-center"></div>
+            <button id="b1" class="w3-button w3-theme-d2 w3-center" onclick="toggle('b1','hidden1')">See more</button>
+            <div  id="hidden1" class="w3-container" style="display: none;">
+               There are about 1000 people living in sheger city.The population prymide
+               of this city is dominated by adults  followd by  young childs.incase of gender
+               classification sheger is  the only city which is dominated by males in our 
+               country ethiopia when we campard it with those city whose population number
+               exceed 1000.
+            </div>
+         </div>
+      </div>
+
+      <div class="w3-container w3-col l6 m6 s12" >
+         <div class="w3-card">
+            <div class=" w3-xxlarge w3-wide w3-light-gray w3-padding-16 w3-center" >SIZE</div>
+            <div id="id002" class="w3-padding-16 w3-xxlarge w3-wide w3-center"></div>
+            <button id="b2" class="w3-button w3-theme-d2 w3-center" onclick="toggle('b2','hidden2')">See more</button>
+            <div  id="hidden2" class="w3-container" style="display: none;">
+               There are about 1000 people living in sheger city.The population prymide
+               of this city is dominated by adults  followd by  young childs.incase of gender
+               classification sheger is  the only city which is dominated by males in our 
+               country ethiopia when we campard it with those city whose population number
+               exceed 1000.
+            </div>
+         </div>
+      </div>
+
+   </div>
+
+   <script>
+      let elem1 = document.getElementById('id001');
+      let elem2 = document.getElementById('id002');
+      let id, width;
+      width = 0;
+      id = setInterval(myfunc,10) ;
+      function myfunc(){
+       if(width == 1000)  {
+         clearInterval(id);
+       }
+       else{
+         width++;
+         elem1.innerHTML = width;
+         elem2.innerHTML = width;
+       }
+      }
+      function toggle(id1,id2){
+        let elem1 = document.getElementById(id1);
+        let elem2 = document.getElementById(id2);
+
+        if(elem2.className.indexOf('w3-show') == -1){
+         elem2.className += ' w3-show';
+         elem1.innerHTML = 'Show less';
+        }
+        else{
+         elem2.className = elem2.className.replace(' w3-show','');
+         elem1.innerHTML = 'Show more';
+        }
+      }
+   </script>
+</body>
+</html>

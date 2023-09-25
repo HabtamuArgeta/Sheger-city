@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sheger City</title>
+    <link rel="stylesheet" href="w3.css">
+    <link rel="stylesheet" href="w3-theme-blue-grey.css">
+</head>
+<body>
+   
+   <div class="w3-top">
+     <div class="w3-row w3-white "> 
+      <span class="w3-col w3-left l1 m2 s3 w3-theme-d2 w3-padding w3-xlarge">LOGO</span> 
+      <div class="w3-col l3 m4 s6  w3-padding w3-xlarge w3-wide w3-right" >SHEGER CITY</div>
+    </div>
+     <!--Here is code for horizontal bar -->
+     <div class="top-bar w3-teal" style="padding:2px;">
+        <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-large" onclick="openSbar()">&#9776;</a>
+        <a href="../Home/Home.html" class="w3-bar-item w3-button active1" target="containerFram" onclick="makeMeActive(event)" id="home">Home</a>         
+        <a class="w3-bar-item w3-button w3-hide-small " onclick="redirectToSideBar('aboutDetail')">About</a>
+        <a class="w3-bar-item w3-button w3-hide-small " onclick="redirectToSideBar('governmentDetail')">Government</a>
+        <a class="w3-bar-item w3-button w3-hide-small w3-hide-medium " onclick="redirectToSideBar('councilDetail')">Council</a>
+        <a class="w3-bar-item w3-button w3-hide-small w3-hide-medium" onclick="redirectToSideBar()">Project</a>
+        <a class="w3-bar-item w3-button w3-hide-small w3-hide-medium" onclick="redirectToSideBar()">Services</a>
+        <a class="w3-bar-item w3-button w3-hide-small w3-hide-medium" onclick="redirectToSideBar('exploreDetail')">Explore</a>
+        <a class="w3-bar-item w3-button w3-hide-small" onclick="openSbar()">More</a>
+        <select id="select01" class="w3-col l3 m4 s6 w3-select w3-border  w3-right "  onchange="createSuggestion()">
+          <option class="w3-wide" value="" disabled selected> Choose color of the year </option>
+          <option style="color:#B4B7BA;background-color:#fff" value="#fff">2018 Sailor White</option>
+          <option style="color:#000;background-color:#F0EDE5" value="#F0EDE5">2018 Coconut Milk</option>
+          <option style="color:#000;background-color:#C0AB8E" value="#C0AB8E">2018 Warm Sand</option>
+          <option style="color:#000;background-color:#B4B7BA" value="#B4B7BA">2018 Harbor Mist</option>
+          <option style="color:#fff;background-color:#2E4A62" value="#2E4A62">2018 Sailor Blue</option>
+          <option style="color:#000;background-color:#BFD641" value="#BFD641">2018 Lime Punch</option>
+          <option style="color:#fff;background-color:#BC70A4" value="#BC70A4">2018 Spring Crocus</option>
+          <option style="color:#000;background-color:#EADEDB" value="#EADEDB">2018 Almost Mauve</option>
+          <option style="color:#fff;background-color:#6B5B95" value="#6B5B95">2018 Ultra Violet</option>
+          <option style="color:#fff;background-color:#6C4F3D" value="#6C4F3D">2018 Emperador</option>
+          <option style="color:#fff;background-color:#00A591" value="#00A591">2018 Arcadia</option>
+          <option style="color:#000;background-color:#EC9787" value="#EC9787">2018 Blooming Dahlia</option>
+          <option style="color:#000;background-color:#DBB1CD" value="#DBB1CD">2018 Pink Lavender</option>
+          <option style="color:#fff;background-color:#944743" value="#944743">2018 Chili Oil</option>
+          <option style="color:#000;background-color:#6F9FD8" value="#6F9FD8">2018 Little Boy Blue</option>
+          <option style="color:#fff;background-color:#E94B3C" value="#E94B3C">2018 Cherry Tomato</option>
+          <option style="color:#000;background-color:#ECDB54" value="#ECDB54">2018 Meadowlark</option>
+          <option style="color:#000;background-color:#95dee3" value="#95dee3">2018 Meerkat</option>
+          <option style="color:#000;background-color:#BCBCBE" value="#BCBCBE">2018 Quiet Gray</option>
+          <option style="color:#000;background-color:#D1B894" value="#D1B894">2018 Almond Buff</option>
+          <option style="color:#000;background-color:#EAE6DA" value="#EAE6DA">2018 Tofu</option>
+          <option style="color:#fff;background-color:#485167" value="#485167">2018 Sargasso Sea</option>
+          <option style="color:#fff;background-color:#006E6D" value="#006E6D">2018 Quetzal Green</option>
+          <option style="color:#000;background-color:#F1EA7F" value="#F1EA7F">2018 Limelight</option>
+          <option style="color:#000;background-color:#BE9EC9" value="#BE9EC9">2018 Crocus Petal</option>
+          <option style="color:#fff;background-color:#E47A2E" value="#E47A2E">2018 Russet Orange</option>
+          <option style="color:#fff;background-color:#766F57" value="#766F57">2018 Martini Olive</option>
+          <option style="color:#000;background-color:#D5AE41" value="#D5AE41">2018 Ceylon Yellow</option>
+          <option style="color:#fff;background-color:#3F69AA" value="#3F69AA">2018 Nebulas Blue</option>
+          <option style="color:#fff;background-color:#BD3D3A" value="#BD3D3A">2018 Valiant Poppy</option>
+          <option style="color:#fff;background-color:#7F4145" value="#7F4145">2018 Red Pear</option>
+          <option style="color:#000;background-color:#cfb095" value="#cfb095">2017 Hazelnut</option>
+          <option style="color:#fff;background-color:#5a7247" value="#5a7247">2017 Kale</option>
+          <option style="color:#fff;background-color:#ce3175" value="#ce3175">2017 Pink Yarrow</option>
+          <option style="color:#000;background-color:#edcdc2" value="#edcdc2">2017 Pale Dogwood</option>
+          <option style="color:#000;background-color:#95dee3" value="#95dee3">2017 Island Paradise</option>
+          <option style="color:#fff;background-color:#f2552c" value="#f2552c">2017 Flame</option>
+          <option style="color:#fff;background-color:#004b8d" value="#004b8d">2017 Lapis Blue</option>
+          <option style="color:#fff;background-color:#f6d155" value="#f6d155">2017 Primrose Yellow</option>
+          <option style="color:#fff;background-color:#578ca9" value="#578ca9">2017 Niagara</option>
+          <option style="color:#fff;background-color:#d2691e" value="#d2691e">2017 Autumn Maple</option>
+          <option style="color:#fff;background-color:#4F84C4" value="#4F84C4">2017 Marina</option>
+          <option style="color:#fff;background-color:#9c9a40" value="#9c9a40">2017 Golden Lime</option>
+          <option style="color:#fff;background-color:#005960" value="#005960">2017 Shaded Spruce</option>
+          <option style="color:#fff;background-color:#898e8c" value="#898e8c">2017 Neutral Gray</option>
+          <option style="color:#fff;background-color:#223a5e" value="#223a5e">2017 Navy Peony</option>
+          <option style="color:#fff;background-color:#c48f65" value="#c48f65">2017 Butterum</option>
+          <option style="color:#000;background-color:#f3d6e4" value="#f3d6e4">2017 Ballet Slipper</option>
+          <option style="color:#fff;background-color:#672e3b" value="#672e3b">2017 Tawny Port</option>
+          <option style="color:#fff;background-color:#dc4c46" value="#dc4c46">2017 Grenadine</option>
+          <option style="color:#fff;background-color:#92b558" value="#92b558">2017 Greenery</option>
+          <option style="color:#fff;background-color:#4c6a92" value="#4c6a92">2016 Riverside</option>
+          <option style="color:#fff;background-color:#92b6d5" value="#92b6d5">2016 Airy Blue</option>
+          <option style="color:#fff;background-color:#838487" value="#838487">2016 Sharkskin</option>
+          <option style="color:#fff;background-color:#b93a32" value="#b93a32">2016 Aurora Red</option>
+          <option style="color:#fff;background-color:#af9483" value="#af9483">2016 Warm Taupe</option>
+          <option style="color:#fff;background-color:#ad5d5d" value="#ad5d5d">2016 Dusty Cedar</option>
+          <option style="color:#fff;background-color:#006e51" value="#006e51">2016 Lush Medow</option>
+          <option style="color:#fff;background-color:#d8ae47" value="#d8ae47">2016 Spicy Mustard</option>
+          <option style="color:#fff;background-color:#9e4624" value="#9e4624">2016 Potter's Clay</option>
+          <option style="color:#fff;background-color:#b76ba3" value="#b76ba3">2016 Bodacious</option>
+          <option style="color:#000;background-color:#f7cac9" value="#f7cac9">2016 Rose Quarts</option>
+          <option style="color:#fff;background-color:#92a8d1" value="#92a8d1">2016 Serenity</option>
+          <option style="color:#fff;background-color:#f7786b" value="#f7786b">2016 Peach Echo</option>
+          <option style="color:#fff;background-color:#034f84" value="#034f84">2016 Snorkel Blue</option>
+          <option style="color:#000;background-color:#98ddde" value="#98ddde">2016 Limpet Shell</option>
+          <option style="color:#fff;background-color:#9896a4" value="#9896a4">2016 Lilac Grey</option>
+          <option style="color:#fff;background-color:#b18f6a" value="#b18f6a">2016 Iced Coffe</option>
+          <option style="color:#fff;background-color:#dd4132" value="#dd4132">2016 Fiesta</option>
+          <option style="color:#000;background-color:#fae03c" value="#fae03c">2016 Buttercup</option>
+          <option style="color:#fff;background-color:#79c753" value="#79c753">2016 Green Flash</option>
+          <option style="color:#fff;background-color:#955251" value="#955251">2015 Marsala</option>
+          <option style="color:#fff;background-color:#b565a7" value="#b565a7">2014 Radiand Orchid</option>
+          <option style="color:#fff;background-color:#009b77" value="#009b77">2013 Emerald</option>
+          <option style="color:#fff;background-color:#dd4124" value="#dd4124">2012 Tangerine Tango</option>
+          <option style="color:#fff;background-color:#d65076" value="#d65076">2011 Honeysucle</option>
+          <option style="color:#fff;background-color:#45b8ac" value="#45b8ac">2010 Turquise</option>
+          <option style="color:#fff;background-color:#efc050" value="#efc050">2009 Mimosa</option>
+          <option style="color:#fff;background-color:#5b5ea6" value="#5b5ea6">2008 Blue Izis</option>
+          <option style="color:#fff;background-color:#9b2335" value="#9b2335">2007 Chili Pepper</option>
+          <option style="color:#000;background-color:#dfcfbe" value="#dfcfbe">2006 Sand Dollar</option>
+        </select>
+     </div>
+    </div>
+
+    <!--Here is code for side bar -->
+    <div class="w3-sidebar w3-bar-block w3-card-4 w3-animate-left" style="display: none;z-index: 5;" id="sidebar01">
+       <span class=" w3-button w3-right  w3-xlarge w3-animate-fading" onclick="closeSbar()" title="Close sidebar" style="color: #E94B3C;">&times;</span>
+       <input class="w3-bar-item w3-input w3-border w3-border-black" type="text" placeholder="Search here..." id="search01" style="margin: 2px;" onkeyup="filterMe()">
+       <button class="w3-bar-item w3-button w3-large active" onclick="showHidden(event,'aboutDetail')">About </button>
+       <div  style="display: none;" id="aboutDetail">
+         <a href="../About/History.html" class="w3-bar-item w3-button w3-margin-left active1" target="containerFram" onclick="makeMeActive(event)">History</a>
+         <a href="../About/People.html" class="w3-bar-item w3-button w3-margin-left active1" target="containerFram" onclick="makeMeActive(event)">People</a>
+         <a href="../About/geography.html" class="w3-bar-item w3-button w3-margin-left active1" target="containerFram" onclick="makeMeActive(event)">Geography</a>  
+         <a href="#" class="w3-bar-item w3-button w3-margin-left active1" target="containerFram" onclick="makeMeActive(event)">City adminsration</a> 
+       </div>
+       <button  class="w3-bar-item w3-button w3-large active" onclick="showHidden(event,'governmentDetail')">Government
+       </button>
+        <div  style="display: none;" id="governmentDetail">
+         <a href="#" class="w3-bar-item w3-button w3-margin-left active1" target="containerFram" onclick="makeMeActive(event)">Mayor</a>   
+         <a href="#" class="w3-bar-item w3-button w3-margin-left active1" target="containerFram" onclick="makeMeActive(event)">Cabinets</a>
+         <a href="#" class="w3-bar-item w3-button w3-margin-left active1" target="containerFram" onclick="makeMeActive(event)">Structure</a>  
+         <a href="#" class="w3-bar-item w3-button w3-margin-left active1" target="containerFram" onclick="makeMeActive(event)">Subcity</a>
+         <a href="#" class="w3-bar-item w3-button w3-margin-left active1" target="containerFram" onclick="makeMeActive(event)">Office</a>  
+       </div>
+       <button class="w3-bar-item w3-button w3-large active" onclick="showHidden(event,'councilDetail')">Council</button>
+       <div  style="display: none;" id="councilDetail">
+         <a href="#" class="w3-bar-item w3-button w3-margin-left active1" target="containerFram" onclick="makeMeActive(event)">Overview</a>
+         <a href="#" class="w3-bar-item w3-button w3-margin-left active1" target="containerFram" onclick="makeMeActive(event)">Administrative structure</a>
+         <a href="#" class="w3-bar-item w3-button w3-margin-left active1" target="containerFram" onclick="makeMeActive(event)">Council speaker</a>  
+         <a href="#" class="w3-bar-item w3-button w3-margin-left active1" target="containerFram" onclick="makeMeActive(event)">Standing committes</a> 
+         
+       </div>
+       <a href="#" class="w3-bar-item w3-button w3-large active1" target="containerFram" onclick="makeMeActive(event)">Project</a>
+       <a href="#" class="w3-bar-item w3-button w3-large active1"  target="containerFram" onclick="makeMeActive(event)">Serviece</a>
+       <button class="w3-bar-item w3-button w3-large active" onclick="showHidden(event,'exploreDetail')">Explore</button>
+       <div  style="display: none;" id="exploreDetail">
+         <a href="#" class="w3-bar-item w3-button w3-margin-left active1" target="containerFram" onclick="makeMeActive(event)">Park</a>
+         <a href="#" class="w3-bar-item w3-button w3-margin-left active1" target="containerFram" onclick="makeMeActive(event)">Museum</a>
+         <a href="#" class="w3-bar-item w3-button w3-margin-left active1" target="containerFram" onclick="makeMeActive(event)">Historical place</a> 
+         <a href="#" class="w3-bar-item w3-button w3-margin-left active1" target="containerFram" onclick="makeMeActive(event)">Doing business</a>  
+       </div>
+       <button class="w3-bar-item w3-button w3-large active" onclick="showHidden(event,'resourceDetail')">Resource</button>
+       <div  style="display: none;" id="resourceDetail">
+         <a href="#" class="w3-bar-item w3-button w3-margin-left active1" target="containerFram" onclick="makeMeActive(event)">Application form</a>
+         <a href="#" class="w3-bar-item w3-button w3-margin-left active1" target="containerFram" onclick="makeMeActive(event)">Broshers</a>
+         <a href="#" class="w3-bar-item w3-button w3-margin-left active1" target="containerFram" onclick="makeMeActive(event)">Plans</a>
+         <a href="#" class="w3-bar-item w3-button w3-margin-left active1" target="containerFram" onclick="makeMeActive(event)">Reports</a>  
+         <a href="#" class="w3-bar-item w3-button w3-margin-left active1" target="containerFram" onclick="makeMeActive(event)">Legislation</a> 
+         <a href="#" class="w3-bar-item w3-button w3-margin-left active1" target="containerFram" onclick="makeMeActive(event)">Media</a>  
+       </div>
+    </div>
+    <!--Here is code to difene overlay-->
+    <div class="w3-overlay w3-animate-opacity" onclick="closeSbar()" style="cursor: pointer;" id="overlay01"></div>
+    
+    <br><br><br><br><br>
+    <!--Here is hte body of the page is defined-->
+    <div class="w3-container">
+       <iframe name="containerFram" id="ifram01" style="width: 100%;border: 0; min-height: 79.5vh;">
+        <div class="w3-row-padding ">
+          <!--Main container-->
+           <div class="w3-col l9 m8 s12" style="margin-top: 2px;margin-bottom: 2px;">
+      
+             <div class="w3-card w3-center w3-margin-bottom w3-padding-16 w3-light-gray">
+               <div class="w3-wide w3-xxlarge w3-text-teal "> DAILY NEWS </div>
+             </div>
+      
+             <div class="w3-card  w3-display-container w3-padding-16 w3-margin-bottom">
+               <span class="w3-display-topright">1 min</span>
+               <div class="w3-row-padding">
+               <img class="w3-circle w3-col w3-margin-right" src="../../Images/avatar1.png" style="width: 80px;" alt="avatar1">
+               <span class="w3-wide w3-col l3 m4 s6" style="padding-top: 15px;">Type of new</span>
+             </div>
+             <hr>
+             <div class="w3-container">
+                 This is the news which  some ne whose phone numbers is displayed on the screen  can get 
+                 to the point easily and we need to go to the main diagonals when we rich that point .I think
+                 we are the best candidated to do reusible websites for this channals and we will cloth 
+                 what you need to succed ,right?
+              </div>
+            </div>
+      
+            
+            <div class="w3-card w3-display-container w3-padding-16 w3-margin-bottom">
+              <span class="w3-display-topright">20 min</span>
+              <div class="w3-margin-left">Why does this happen?</div><br>
+              <div class="w3-row-padding">
+                <div class="w3-half ">
+                  <img src="../../Images/p4.jpg"  style="width: 100%;" alt="p4.jpg">
+                </div>
+                <div class="w3-half">
+                  <img src="../../Images/p6.jpg"  style="width: 100%;" alt="p6.jpg">
+                </div>  
+             </div>   
+              <div class="w3-container">
+                <div>
+                   Wht do you observe from those images you are seeing on the screen dude?
+                   it is somthing that happend yesterday night at sabata stadium and it will give 
+                   some insight on which how we can save our life form such disgusting things 
+                   but know all things are going in good way !!!
+                </div>
+              </div>
+           </div>
+      
+      
+            <div class="w3-card  w3-display-container w3-padding-16 w3-margin-bottom">
+              <span class="w3-display-topright">40 min</span>
+              <div class="w3-row-padding">
+              <img class="w3-circle w3-col w3-margin-right" src="../../Images/avatar2.png" style="width: 80px;" alt="avatar1">
+              <span class="w3-wide w3-col l3 m4 s6" style="padding-top: 15px;">Type of new</span>
+            </div>
+            <hr>
+            <div class="w3-container">
+                This is the news which  some ne whose phone numbers is displayed on the screen  can get 
+                to the point easily and we need to go to the main diagonals when we rich that point .I think
+                we are the best candidated to do reusible websites for this channals and we will cloth 
+                what you need to succed ,right?
+             </div>
+           </div>
+      
+           <div class="w3-card  w3-display-container w3-padding-16 w3-margin-bottom">
+            <span class="w3-display-topright">1 hour</span>
+            <div class="w3-row-padding">
+            <img class="w3-circle w3-col w3-margin-right" src="../../Images/avatar5.png" style="width: 80px;" alt="avatar5">
+            <span class="w3-wide w3-col l3 m4 s6" style="padding-top: 15px;">Type of new</span>
+          </div>
+          <hr>
+          <p class="w3-margin-left">This is what is happend last night </p>
+          <div class="w3-container">
+            <div style="width: 50%;">
+              <img  class="w3-image" src="../../Images/bandmember.jpg" style="width: 100%;margin-left: 20%;" alt="avatar1">
+            </div>
+            <div>
+              This is the news which  some ne whose phone numbers is displayed on the screen  can get 
+              to the point easily and we need to go to the main diagonals when we rich that point .I think
+              we are the best candidated to do reusible websites for this channals and we will cloth 
+              what you need to succed ,right?
+             </div>
+           </div>
+         </div>
+      
+           </div>
+           <!--Left container-->
+           <div class="w3-col l3 m4 s12" style="margin-top: 2px;margin-bottom: 2px;">
+      
+             <div class="w3-card w3-center">
+               <div class="w3-wide">Cherperson</div><br>
+               <img src="../../Images/avatar3.png" style="width: 100%;" alt="avatar3">
+               <p class="w3-wide">JOHN DOE</p>
+               <hr>
+               <div> From  2016</div>
+               <div>Till now</div>
+              </div>
+      
+              <div class="w3-card w3-center">
+                <p class="w3-wide">Upcomming Event</p>
+                <img src="../../Images/forestbridge.jpg" style="width: 100%;" alt="upcomming event one ">
+                <p class="w3-wide">Holiday</p>
+                <hr>
+                 <div> 1 october 2016</div>
+                 <button class="w3-button w3-theme-d1">Info</button>
+               </div>
+      
+           </div>
+         </div> 
+      
+         <footer class="w3-container w3-theme-d3 w3-padding-16">
+          <h5>Footer</h5>
+        </footer>
+      </iframe>
+    </div>
+
+    <script>
+     function createSuggestion(){
+      let choosenColor = document.getElementById('select01').value;
+      let elements =  document.getElementsByClassName('w3-container');
+      let i;
+      for(i=0;i<elements.length;i++){
+         elements[i].style.backgroundColor = choosenColor;
+      }
+    }
+
+   function closeSbar(){
+   document.getElementById('sidebar01').style.display = "none";
+   document.getElementById('overlay01').style.display = "none";
+    }
+  function openSbar(){
+   document.getElementById('sidebar01').style.display = "block";
+   document.getElementById('overlay01').style.display = "block";
+    }
+
+    function showHidden(evt,id){
+      let elem = document.getElementById(id);
+      if(elem.className.indexOf('w3-show') == -1){
+         elem.className += 'w3-show'
+         
+      }
+      else{
+         elem.className = elem.className.replace('w3-show','');
+      }
+      let active = document.getElementsByClassName('active');
+      let i;
+      for(i=0;i<active.length;i++){
+        active[i].className = active[i].className.replace(' w3-green','');
+      }
+      evt.currentTarget.className += " w3-green";
+    }
+   function  redirectToSideBar(id){
+    openSbar();
+    showHidden('',id)
+   }
+
+   function makeMeActive(evt){
+    let active = document.getElementsByClassName('active1');
+      let i;
+      for(i=0;i<active.length;i++){
+        active[i].className = active[i].className.replace(' w3-pale-green','');
+      }
+      evt.currentTarget.className += " w3-pale-green";
+    }
+   
+     function filterMe(){
+     let sidebar =  document.getElementById('sidebar01');
+     let filteredElement = sidebar.getElementsByTagName('a');
+     let filteringData = document.getElementById('search01').value;
+     filteringData = filteringData.toUpperCase();
+     let i,dataOfFilteredElement;
+      for( i=0;i<filteredElement.length;i++){
+        dataOfFilteredElement = filteredElement[i].innerText ;
+        if(dataOfFilteredElement.toUpperCase().indexOf(filteringData) != -1){
+          filteredElement[i].style.display = "block"
+        }
+        else{
+           filteredElement[i].style.display = "none"
+        }
+      }
+     }
+    </script>
+
+</body>
+</html>
